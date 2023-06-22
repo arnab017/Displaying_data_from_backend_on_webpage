@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display_Topics</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      th {
+        background-color: aquamarine;
+      }
+      td {
+        background-color: rgb(252, 193, 193);
+      }
+      table{
+        width: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <center><h1>Displaying Topic Table Data</h1></center>
+    <hr />
+    <table align="center" border="1px" cellspacing="0" cellpadding="10px">
+      <tr>
+        <th><h2>Topic Names</h2></th>
+      </tr>
+      {% for to in topics %}
+      <tr>
+        <td align="center">{{to.topic_name}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

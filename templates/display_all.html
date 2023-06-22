@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display_AccessRecords</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .box{
+        display: flex;
+        justify-content: space-between;
+      }
+      table{
+        height: 60vh;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+        <div>
+            <h1>Topic Table</h1>
+            <table border="1px" cellspacing="0" cellpadding="10px">
+                <tr>
+                  <th><h2>Topic Names</h2></th>
+                </tr>
+                {% for to in topics %}
+                <tr>
+                  <td align="center">{{to.topic_name}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div>
+            <h1>Webpage Table</h1>
+            <table border="1px" cellspacing="0" cellpadding="10px">
+                <tr>
+                  <th><h2>Topic Names</h2></th>
+                  <th><h2>Name</h2></th>
+                  <th><h2>URL</h2></th>
+                </tr>
+                {% for wo in webpages %}
+                <tr>
+                  <td align="center">{{wo.topic_name}}</td>
+                  <td align="center">{{wo.name}}</td>
+                  <td align="center">{{wo.url}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div>
+            <h1>AccessRecords Table</h1>
+            <table border="1px" cellspacing="0" cellpadding="10px">
+                <tr>
+                  <th><h2>Name</h2></th>
+                  <th><h2>Date</h2></th>
+                  <th><h2>Author</h2></th>
+                </tr>
+                {% for aro in accessrecords %}
+                <tr>
+                  <td align="center">{{aro.name}}</td>
+                  <td align="center">{{aro.date}}</td>
+                  <td align="center">{{aro.author}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        
+    
+          
+    
+          
+    </div>
+
+    
+  </body>
+</html>
